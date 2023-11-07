@@ -11,7 +11,7 @@ import { equiposBodyComponent } from './components/equiposDeComputo/mybody/equip
 import { equiposHeadComponent } from './components/equiposDeComputo/myhead/equiposHead-component.component';
 import { myhead2Component } from './components/home/myhead2/myhead2-component.component';
 import { HttpClientModule } from '@angular/common/http'
-import { Axios } from 'axios';
+// import { Axios } from 'axios';
 
 @NgModule({
   declarations: [

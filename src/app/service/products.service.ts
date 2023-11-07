@@ -5,7 +5,7 @@ export class productService {
   //create producto in database
   createProduct() {}
 
-  //Fetch a produc from Database
+  //Fetch a product from Database
   fetchProduct() {}
 
   //Delete a product from database
