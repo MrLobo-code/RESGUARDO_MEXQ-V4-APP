@@ -1,4 +1,4 @@
-<table class="table-fixed m-auto" *ngIf="equipos">
+<table class="table-fixed m-auto">
   <thead>
     <tr>
       <th class="px-3">id</th>
@@ -48,7 +48,10 @@
       <td class="px-3">Empty</td>
     </tr>
     <tr>
-      <td class="px-3" *ngFor="let equipos of equipo | async">Empty... {{equipos.codigo}}</td>
+      <td class="px-3" *ngFor="let equipos of equipos | async">Empty... {{equipos.id}}</td>
+      <td class="px-3" *ngFor="let equipos of equipos | async">Empty... {{equipos.codigo}}</td>
+      <td class="px-3" *ngFor="let equipos of equipos | async">Empty... {{equipos.nomina}}</td>
+
     </tr>
   </tbody>
 </table>

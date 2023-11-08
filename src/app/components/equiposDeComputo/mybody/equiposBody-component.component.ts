@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { EquiposTableService } from '../../../service/equipos-table.service';
 import { AxiosResponse } from 'axios';
 
+// interface equipo {          these helps to 
+// id: number,
+// codigo: number,
+// }
+
 @Component ({
     selector: 'equiposBody',
     templateUrl: './equiposBody-component.component.html',
@@ -9,12 +14,13 @@ import { AxiosResponse } from 'axios';
 })
 export class equiposBodyComponent implements OnInit{
 
-    equipo : any;
-  equipos: Promise<AxiosResponse<any, any>> = this.equiposService.getEquipos() as Promise<AxiosResponse<any, any>>;
+    equipos: any;
 
   constructor(private equiposService: EquiposTableService) {}
   
-  ngOnInit(): void {}
+  async ngOnInit() {
+    this.equipos = await this.equiposService.getEquipos();
+  }
 }
 
 // import { Component, OnInit } from '@angular/core';
