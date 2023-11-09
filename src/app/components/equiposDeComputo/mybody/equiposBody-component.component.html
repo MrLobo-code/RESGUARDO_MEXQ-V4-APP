@@ -48,10 +48,13 @@
       <td class="px-3">Empty</td>
     </tr>
     <tr>
-      <td class="px-3" *ngFor="let equipos of equipos | async">Empty... {{equipos.id}}</td>
-      <td class="px-3" *ngFor="let equipos of equipos | async">Empty... {{equipos.codigo}}</td>
-      <td class="px-3" *ngFor="let equipos of equipos | async">Empty... {{equipos.nomina}}</td>
-
+    <tr *ngFor="let equipo of equipos | async">
+      <td class="px-3">{{equipo.id}}</td>
+      <td class="px-3">{{equipo.codigo}}</td>
+      <td class="px-3">{{equipo.nomina}}</td>
+      <td class="px-3">Empty</td>
+      <td class="px-3">Empty</td>
+      <td class="px-3">Empty</td>
     </tr>
   </tbody>
 </table>
