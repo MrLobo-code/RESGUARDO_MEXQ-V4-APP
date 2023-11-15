@@ -1,11 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { EquiposTableService } from '../../../service/equipos-table.service';
-// import { AxiosResponse } from 'axios';
+import { Observable } from 'rxjs';
 
-// interface equipo {          these helps to
-// id: number,
-// codigo: number,
-// }
+export interface Equipo {
+  id: number;
+  codigo: string;
+  nomina: string;
+  nombre: string;
+  sucursal: string;
+  area: string;
+  marca: string;
+  modelo: string;
+  no_serie: string;
+  fecha: string;
+  no_factura: string;
+  proveedor: string;
+  estado: string;
+}
 
 @Component ({
     selector: 'equiposBody',
@@ -14,11 +25,14 @@ import { EquiposTableService } from '../../../service/equipos-table.service';
 })
 export class equiposBodyComponent implements OnInit{
 
-    equipos: any;
+  equipos: Array<Equipo> = [];
 
-  constructor(private equiposService: EquiposTableService) {}
+  constructor(private equiposService: EquiposTableService) {
+  }
   
   async ngOnInit() {
-    this.equipos = await this.equiposService.getEquipos();
+    this.equipos = (await this.equiposService.getEquipos()).data;  
+    console.log(this.equipos);
+      
   }
 }

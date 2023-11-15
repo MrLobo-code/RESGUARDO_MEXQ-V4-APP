@@ -5,6 +5,7 @@
       <th class="px-3">Código</th>
       <th class="px-3">Nómina</th>
       <th class="px-3">Nombre</th>
+      <th class="px-3">Sucursal</th>
       <th class="px-3">Area</th>
       <th class="px-3">Marca</th>
       <th class="px-3">Modelo</th>
@@ -17,44 +18,27 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td class="px-3">Empty</td>
-      <td class="px-3">pty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Ety</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-    </tr>
-    <tr>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-    </tr>
-    <tr>
-    <tr *ngFor="let equipo of equipos | async">
-      <td class="px-3">{{equipo.id}}</td>
-      <td class="px-3">{{equipo.codigo}}</td>
-      <td class="px-3">{{equipo.nomina}}</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
-      <td class="px-3">Empty</td>
+    <tr *ngFor="let equipo of equipos">
+      <td class="px-3">{{ equipo.id }}</td>
+      <td class="px-3">{{ equipo.codigo }}</td>
+      <td class="px-3">{{ equipo.nomina }}</td>
+      <td class="px-3">{{ equipo.nombre }}</td>
+      <td class="px-3">{{ equipo.sucursal }}</td>
+      <td class="px-3">{{ equipo.area }}</td>
+      <td class="px-3">{{ equipo.marca }}</td>
+      <td class="px-3">{{ equipo.modelo }}</td>
+      <td class="px-3">{{ equipo.no_serie }}</td>
+      <td class="px-3">{{ equipo.fecha }}</td>
+      <td class="px-3">{{ equipo.no_factura }}</td>
+      <td class="px-3">{{ equipo.proveedor }}</td>
+      <td class="px-3">{{ equipo.estado }}</td>
+      <td class="px-3">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Button
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>
