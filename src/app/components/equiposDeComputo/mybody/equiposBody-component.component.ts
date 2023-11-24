@@ -27,12 +27,11 @@ export class equiposBodyComponent implements OnInit{
 
   equipos: Array<Equipo> = [];
 
-  constructor(private equiposService: EquiposTableService) {
-  }
+  constructor(private equiposService: EquiposTableService) {}
   
   async ngOnInit() {
     this.equipos = (await this.equiposService.getEquipos()).data;  
     console.log(this.equipos);
-      
+
   }
 }
