@@ -10,7 +10,8 @@ import { edcComponentPage } from './pages/equiposDeComputo-Page/edc-component.co
 import { equiposBodyComponent } from './components/equiposDeComputo/mybody/equiposBody-component.component';
 import { equiposHeadComponent } from './components/equiposDeComputo/myhead/equiposHead-component.component';
 import { myhead2Component } from './components/home/myhead2/myhead2-component.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { AddequipoComponent } from './addequipo_modal/addequipo.component'
 // import { Axios } from 'axios';
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http'
     edcComponentPage,
     equiposBodyComponent,
     equiposHeadComponent,
-    myhead2Component
+    myhead2Component,
+    AddequipoComponent
   ],
   imports: [
     BrowserModule,

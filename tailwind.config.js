@@ -17,6 +17,8 @@ module.exports = {
     // './src/app/pages/equiposDeComputo-Page/edc-component.component.html',
     // './src/app/pages/equiposDeComputo-Page/edc-component.component.ts',
 
+    'src/app/addequipo_modal/addequipo.component.html',
+
     './src/app/app.component.html',
     // './src/app/app.component.ts',
     './index.html',

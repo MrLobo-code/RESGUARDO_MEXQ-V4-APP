@@ -17,7 +17,7 @@ export interface Equipo {
   proveedor: string;
   estado: string;
 }
-
+  
 @Component ({
     selector: 'equiposBody',
     templateUrl: './equiposBody-component.component.html',

@@ -10,23 +10,23 @@ export class EquiposTableService {
     // var rea  = axios.
     // var upd  = axios.
     // var del  = axios.delete
-    return axios.get('http://192.168.2.146:8000/api/json/equipos');
+    return axios.get('http://192.168.2.189:8000/api/json/equipos');
   }
 
   //--------------------------------------------------------------------------------
-  postEquipo() {
-    axios.post('/user', {
-        firstName: 'Fred',
-        lastName: 'Flintstone',
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+  // postEquipo() {
+  //   axios.post('/user', {
+  //       firstName: 'Fred',
+  //       lastName: 'Flintstone',
+  //     })
+  //     .then(function (response) {
+  //       console.log(response);
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
 
-    return 0;
-  }
+  //   return 0;
+  // }
   //--------------------------------------------------------------------------------
 }
