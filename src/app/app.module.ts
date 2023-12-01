@@ -12,6 +12,7 @@ import { equiposHeadComponent } from './components/equiposDeComputo/myhead/equip
 import { myhead2Component } from './components/home/myhead2/myhead2-component.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddequipoComponent } from './addequipo_modal/addequipo.component'
+import { FormsModule } from '@angular/forms';
 // import { Axios } from 'axios';
 
 @NgModule({
@@ -29,7 +30,8 @@ import { AddequipoComponent } from './addequipo_modal/addequipo.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
