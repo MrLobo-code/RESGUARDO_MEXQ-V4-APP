@@ -13,6 +13,8 @@ import { myhead2Component } from './components/home/myhead2/myhead2-component.co
 import { HttpClientModule } from '@angular/common/http';
 import { AddequipoComponent } from './addequipo_modal/addequipo.component'
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { savedmodal } from './components/modals/saved/savedModal.component';
 // import { Axios } from 'axios';
 
 @NgModule({
@@ -25,13 +27,15 @@ import { FormsModule } from '@angular/forms';
     equiposBodyComponent,
     equiposHeadComponent,
     myhead2Component,
-    AddequipoComponent
+    AddequipoComponent,
+    savedmodal
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <button class="bg bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-8" (click)="openModal()">
     Nuevo registro
   </button>
-  
+
   <div class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center" *ngIf="showModal">
     <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
     <div class="modal-container bg-white w-3/4 md:max-w-3x1 mx-auto rounded justify-center shadow-lg z-50 overflow-y-auto">
@@ -46,15 +46,13 @@
                 <input name="serial" [(ngModel)]="serial_number" type="text" id="first_name" class="w-80 mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg­­­­ focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="No. serie" required>
                 <input name="pnumber" [(ngModel)]="product_number" type="text" id="first_name" class="w-80 mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="No. producto" required>
                 <input name="factura" [(ngModel)]="bill_number" type="text" id="first_name" class="w-80 mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="No. factura" required>
-                <input name="fecha" [(ngModel)]="date" type="text" id="first_name" class="w-80 mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="[fecha...]" required>
+                <input name="fecha" [(ngModel)]="fecha" type="text" id="first_name" class="w-80 mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="[fecha...]" required>
                 <input name="preveedor" [(ngModel)]="provider" type="text" id="first_name" class="w-80 mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Proveedor" required>
                 <input name="comentarios" [(ngModel)]="comments" type="text" id="first_name" class="w-80 mt-2 mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Comentarios adicionales" required>
             </div>
             <div class="grid mt-8 mb-8">
-                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded h-15" (click)="addEquipo()">
-                <!-- <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded h-15" onclick="addEquipo()"> -->
-                <!-- <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded h-15"> -->
-                Save
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded h-15" (click)="addEquipo(); showalert()">
+                  Save
                 </button>
                 <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-10 mb-10 h-15">
                     Cancel
